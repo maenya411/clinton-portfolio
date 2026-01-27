@@ -26,7 +26,7 @@
           target="_blank"
           class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg group-hover:bg-blue-600 transition-colors"
         >
-          View Project
+          View Project.
         </a>
       </div>
     </div>
