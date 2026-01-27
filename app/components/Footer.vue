@@ -18,7 +18,7 @@
 
     <!-- Bottom Copyright -->
     <div class="mt-8 text-center text-gray-400 text-xs">
-      © 2026 Clinton Maenya. All rights reserved.
+      © 2026 Clinton Maenya. All rights reserved..
     </div>
   </footer>
 </template>
