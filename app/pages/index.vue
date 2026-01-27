@@ -77,7 +77,7 @@ import { ref, onMounted } from 'vue'
 
 import Navbar from '~/components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
-import ProjectCard from '~/components/ProjectCard.vue'
+import ProjectCard from '~/components/projects/ProjectCard.vue'
 
 // Typing effect state
 const fullText = "Hi, I'm Clinton Maenya"
