@@ -53,7 +53,7 @@
           class="p-6 bg-green-100 dark:bg-green-900 rounded-xl text-center shadow transform transition duration-300
                  hover:scale-105 hover:shadow-lg hover:bg-green-200 dark:hover:bg-green-800 cursor-pointer"
         >
-          <p class="text-gray-800 dark:text-gray-200 mb-2 font-medium">WhatsApp Me</p>
+          <p class="text-gray-800 dark:text-gray-200 mb-2 font-medium">WhatsApp Me.</p>
 
           <!-- Hidden text appears inside card -->
           <div class="overflow-hidden">

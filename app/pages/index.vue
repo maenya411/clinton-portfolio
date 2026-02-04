@@ -5,45 +5,52 @@
 
     <!-- Hero Section -->
     <section
-      class="text-center py-24 bg-gradient-to-r from-blue-400 to-purple-500 text-white relative"
+      class="relative text-center py-24 text-white bg-cover bg-center"
+      style="background-image: url('/images/projectbk.jpeg')"
     >
-      <!-- Floating decor circle -->
-      <div
-        class="absolute top-0 left-1/2 transform -translate-x-1/2 mt-4 w-24 h-24 bg-white/10 rounded-full animate-pulse"
-      ></div>
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
 
-      <!-- Typing Text -->
-      <h1 class="text-5xl font-bold mb-4">
-        {{ displayedText }}
-        <span v-if="isTyping" class="animate-pulse">|</span>
-      </h1>
+      <!-- Hero Content -->
+      <div class="relative z-10">
+        <!-- Floating decor circle -->
+        <div
+          class="absolute top-0 left-1/2 transform -translate-x-1/2 mt-4 w-24 h-24 bg-white/10 rounded-full animate-pulse"
+        ></div>
 
-      <p class="text-xl mb-6">
-        Full Software Developer | Nuxt.js & Tailwind CSS | Graphic Designer
-      </p>
+        <!-- Typing Text -->
+        <h1 class="text-5xl font-bold mb-4">
+          {{ displayedText }}
+          <span v-if="isTyping" class="animate-pulse">|</span>
+        </h1>
 
-      <!-- Profile Avatar -->
-      <div class="inline-block relative">
-        <img
-          src="/images/profile.jpg"
-          alt="Clinton Maenya"
-          class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-xl ring-2 ring-blue-300 hover:ring-purple-400 transition-all duration-300 cursor-pointer"
-        />
-
-        <!-- Online status -->
-        <span
-          class="absolute bottom-1 right-1 w-4 h-4 bg-green-400 border-2 border-white rounded-full"
-        ></span>
-      </div>
-
-      <!-- Name & Role -->
-      <div class="mt-4">
-        <p class="text-xl font-semibold">
-          Here we create solutions for everything concerning tech world
+        <p class="text-xl mb-6">
+          Full Software Developer | Nuxt.js & Tailwind CSS | Graphic Designer
         </p>
-        <p class="text-sm text-white/80">
-          Frontend Developer & Graphic Designer
-        </p>
+
+        <!-- Profile Avatar -->
+        <div class="inline-block relative">
+          <img
+            src="/images/profile.jpg"
+            alt="Clinton Maenya"
+            class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-xl ring-2 ring-blue-300 hover:ring-purple-400 transition-all duration-300 cursor-pointer"
+          />
+
+          <!-- Online status -->
+          <span
+            class="absolute bottom-1 right-1 w-4 h-4 bg-green-400 border-2 border-white rounded-full"
+          ></span>
+        </div>
+
+        <!-- Name & Role -->
+        <div class="mt-4">
+          <p class="text-xl font-semibold">
+            Here we create solutions for everything concerning tech world
+          </p>
+          <p class="text-sm text-white/80">
+            Frontend Developer & Graphic Designer
+          </p>
+        </div>
       </div>
     </section>
 
@@ -79,7 +86,7 @@ import Navbar from '~/components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
 import ProjectCard from '~/components/projects/ProjectCard.vue'
 
-// Typing effect state
+// Typing effect
 const fullText = "Hi, I'm Clinton Maenya"
 const displayedText = ref('')
 const isTyping = ref(true)
@@ -92,7 +99,7 @@ onMounted(() => {
       displayedText.value += fullText[index]
       index++
     } else {
-      isTyping.value = false // hide cursor after typing finishes
+      isTyping.value = false
       clearInterval(interval)
     }
   }, typingSpeed)
